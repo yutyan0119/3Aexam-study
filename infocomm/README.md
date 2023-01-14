@@ -10,14 +10,16 @@ $$ E_g = \int_{-\infty}^{\infty} |g(t)|^2 dt $$
 $$ P_g = \lim_{T \to \infty} \frac{1}{T} \int_{-T/2}^{T/2} |g(t)|^2 dt $$
 
 - フーリエ級数展開
-  $$ g(t) = \sum_{n=-\infty}^{\infty} c_n e^{j2\pi f_0 n t} $$
+  
+$$ g(t) = \sum_{n=-\infty}^{\infty} c_n e^{j2\pi f_0 n t} $$
 
-  $$ c_n = \frac{1}{2\pi}\int_{-\pi}^{\pi}g(t)e^{-j2\pi f_0nt} dt $$
+$$ c_n = \frac{1}{2\pi}\int_{-\pi}^{\pi}g(t)e^{-j2\pi f_0nt} dt $$
 
 - フーリエ変換
-  $$ G(f) = \frac{1}{2\pi}\int_{-\infty}^{\infty} g(t) e^{-j2\pi ft} dt $$
+  
+$$ G(f) = \frac{1}{2\pi}\int_{-\infty}^{\infty} g(t) e^{-j2\pi ft} dt $$
 
-    $$ g(t) = \int_{-\infty}^{\infty} G(f) e^{j2\pi ft} df $$
+$$ g(t) = \int_{-\infty}^{\infty} G(f) e^{j2\pi ft} df $$
 
 # 2. 信号の分析と伝送
 
@@ -46,7 +48,8 @@ LSB ... lower side band
 
 - 復調方法
   -  $\cos(2\pi f_c t)$ をかけてLPFに通して行う。
-  $$ e(t) = s(t)\cos(2 \pi f_c t) = m(t) \cos^2(2\pi f_c t) = \frac{1}{2}m(t) + \frac{1}{2}\cos(4\pi f_c t) $$
+  
+$$ e(t) = s(t)\cos(2 \pi f_c t) = m(t) \cos^2(2\pi f_c t) = \frac{1}{2}m(t) + \frac{1}{2}\cos(4\pi f_c t) $$
 
 - 受信側にPLLを用意して、受信信号を同期させる必要がある。
 
@@ -57,7 +60,7 @@ $$ s(t) = A_c (1+ m(t)) \cos(2\pi f_c t)  = A_c(1+k_am(t))\cos(2\pi f_c t)$$
 
 受信側にPLLが必要なくなるので、普通のAM。
 
-$k_a < 1$ が満たされる限り、$m(t)$ から $s(t)$ を復元出来る。
+$k_a < 1$ が満たされる限り、 $m(t)$ から $s(t)$ を復元出来る。
 
 また、 $m(t)$ のバンド幅は $f_c$ よりも十分に小さい必要がある。なぜなら、 $s(t)$のフーリエ変換が以下だから。
 
